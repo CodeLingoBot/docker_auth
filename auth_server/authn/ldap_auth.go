@@ -57,7 +57,7 @@ func NewLDAPAuth(c *LDAPAuthConfig) (*LDAPAuth, error) {
 	}, nil
 }
 
-//How to authenticate user, please refer to https://github.com/go-ldap/ldap/blob/master/example_test.go#L166
+// Authenticate: How to authenticate user, please refer to https://github.com/go-ldap/ldap/blob/master/example_test.go#L166
 func (la *LDAPAuth) Authenticate(account string, password PasswordString) (bool, Labels, error) {
 	if account == "" || password == "" {
 		return false, nil, NoMatch
